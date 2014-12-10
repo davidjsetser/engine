@@ -34,7 +34,7 @@ public:
     /**
      * Resumes this State after being paused.
      */
-    virtual void Resume();
+    virtual void Resume(); 
     
     /**
      * Destroys this State because it won't be used again.
@@ -49,6 +49,7 @@ private:
     /**
      * Variables for the default demo.
      */
+    float value;
     int sign;
     float increment;
 };

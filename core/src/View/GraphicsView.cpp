@@ -32,7 +32,7 @@ void GraphicsView::Initialize()
     this->testTextureId = textureId;
 }
 
-void GraphicsView::Update(std::shared_ptr<GraphicsManager> graphicsManager)
+void GraphicsView::Update(std::shared_ptr<View::IGraphicsManager> graphicsManager)
 {
     // Resolve Resources
     this->resourceManager->ResolveResources();

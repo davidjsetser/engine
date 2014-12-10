@@ -3,7 +3,6 @@
 
 #include <stack>
 #include <memory>
-
 #include "ControllerPackage.h"
 #include "GameState.h"
 class GameState;

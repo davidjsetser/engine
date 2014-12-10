@@ -4,9 +4,8 @@
 #include <SFML/Window.hpp>
 #include <functional>
 #include <memory>
-
+#include "IGraphicsManagerView.h"
 #include "ControllerPackage.h"
-#include "GraphicsManager.h"
 #include "Texture.h"
 #include "SFML/OpenGL.hpp"
 
@@ -38,7 +37,7 @@ public:
     /**
      * Updates the GraphicsView.
      */
-    void Update(std::shared_ptr<GraphicsManager> graphicsManager);
+    void Update(std::shared_ptr<View::IGraphicsManager> graphicsManager);
 
 private:
     // Private constructors to disallow access.

@@ -1,5 +1,4 @@
 #include "Controller.h"
-#include "GraphicsManager.h"
 #include "InputManager.h"
 #include "SoundManager.h"
 
@@ -84,7 +83,7 @@ void Controller::updateViews(GraphicsView* graphicsView, InputView* inputView, s
         return;
     }
 
-    graphicsView->Update(controllerPackage->GetGraphicsManager());
+    graphicsView->Update(std::dynamic_pointer_cast<View::IGraphicsManager, Model::IGraphicsManager>(controllerPackage->GetGraphicsManager()));
     inputView->Update(controllerPackage->GetInputManager());
     (*soundView)->Update(controllerPackage->GetSoundManager());
 }
